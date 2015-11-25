@@ -336,4 +336,11 @@ public class Assert {
         }
         return formatted + "expected:<" + expected + "> but was:<" + actual + ">";
     }
+    public <T> boolean assertGreaterThan(T o1, T o2, java.util.Comparator<T> comparator){
+        if(o1.equals(o2)){
+            return true;
+        }else{
+            return false;
+    }
+    }
 }
