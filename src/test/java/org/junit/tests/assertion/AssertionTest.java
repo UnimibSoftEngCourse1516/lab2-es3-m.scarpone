@@ -284,7 +284,22 @@ public class AssertionTest {
         assertEquals(1.0, 1.0, 0.0);
         assertEquals(1.0d, 1.0d, 0.0d);
     }
-
+    //AssertGreaterThan test
+    @Test
+    public void testAssertGreaterThan(){
+        Integer o1 = new Integer(10);
+        Integer o2 = new Integer(1);
+        C1 c = new C1();
+        Assert.assertGreaterThan(o1, o2, c);
+    }
+    
+    @Test
+    private void testAssertGreaterPrimitive(){
+        int i1 = 0;
+        int i2 = 3;
+        Assert.assertGreaterPrimitive(i2, i1);
+    }
+    
     @Test(expected = AssertionError.class)
     public void notEqualsObjectWithNull() {
         assertEquals(new Object(), null);

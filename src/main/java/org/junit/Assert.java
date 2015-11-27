@@ -1019,4 +1019,12 @@ public class Assert {
                 expectedThrowable.getSimpleName());
         throw new AssertionError(message);
     }
+    public static<T> void assertGreaterThan(T o1, T o2, java.util.Comparator<T> comparator){
+        if(comparator.compare(o1, o2) != 1)
+            fail(null);
+    }
+    public static void assertGreaterPrimitive(int i0, int i1){
+        if(!(i0>i1))
+            fail(null);
+    }
 }
